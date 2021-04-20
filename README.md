@@ -1,1 +1,1 @@
- Readme using the [altacv](https://github.com/liantze/AltaCV) template
+ Readme using the [altacv](https://github.com/liantze/AltaCV) template.
