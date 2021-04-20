@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: BuildPDF
 
 # Controls when the action will run. 
 on:
@@ -30,3 +30,7 @@ jobs:
         with:
           root_file: |
             lsanche.tex
+      - uses: actions/upload-artifact@v2
+        with:
+          name: PDF
+          path: lsanche_resume.pdf
