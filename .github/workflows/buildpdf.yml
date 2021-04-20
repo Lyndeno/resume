@@ -6,7 +6,8 @@ name: BuildPDF
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master ]
+    tags:
+      - '*'
   pull_request:
     branches: [ master ]
 
@@ -32,7 +33,6 @@ jobs:
             lsanche.tex
       - name: Release
         uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
         with:
           files: lsanche.pdf
         env:
