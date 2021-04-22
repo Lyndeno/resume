@@ -1,8 +1,97 @@
 \documentclass{lsanche_cv}
+
+\usepackage[letterpaper, total={6.5in, 9in}]{geometry}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[none]{hyphenat}
+
+\setlist[itemize]{leftmargin=*}
+
 \begin{document}
+\noindent
 \name{Lyndon Sanche}
+
+\tagline{Fourth and Final Year Electrical Engineering Student at the University of Alberta}
+
+\contact{51502 Range Road 200A}{Beaver County}{AB T0B4J1}{(780)-940-3401}{lsanche@lyndeno.ca}{lyndeno.ca}{linkedin.com/in/LyndonSanche}
+
+\begin{multicols*}{2}
   \section{Education}
-    \subsection{University of Alberta}
+    \eduexp{University of Alberta}{September 2017--April 2021}{BSc. Electrical Engineering}{Edmonton, Alberta}
+
   \section{Work}
-  \datedsubsection{ATCO}{May--August 2020}
+    \workexp{Clerk I/II -- Substation Engineering}{ATCO Electricity}{May--August 2020}{Edmonton, Alberta}
+    \begin{itemize}
+      \item Reported to supervising engineer in Substation Design
+      \item Maintained and created Powershell code to assist with migrating drawings to project management system(ProjectWise).
+      \item Worked with Engineer in Protection and Control to work on Bentley Microstation VBA script to pull labels from lamacoid drawings to printable labels on a spreadsheet.
+      \item Worked online for the full four months due to COVID-19
+    \end{itemize}
+
+    \workexp{Clerk I/II - Substation Engineering}{ATCO Electricity}{May -- August 2019}{Edmonton, Alberta}
+    \begin{itemize}
+      \item Reported to supervising engineer in Substation Design
+      \item Searched network for missing voltage, current, and power rating information.
+      \item Repaired broken CAD drawings with Bentley Microstation.
+      \item Created Powershell code to aid with searching network drives for certain asset numbers.
+    \end{itemize}
+
+    \workexp{Clerk I/II - Telecom Engineering}{ATCO Electricity}{May -- August 2018}{Edmonton, Alberta}
+    \begin{itemize}
+      \item Reported to supervising engineer in Telecom Engineering.
+      \item Worked with Drawing Control on migration of CAD drawings to new project management system(ProjectWise).
+      \item Converted drawings from AutoCAD format to Bentley Microstation. Conversion often needed some details fixed by hand.
+      \item Created Powershell scripts to organize project folders.
+    \end{itemize}
+
+    \workexp{Produce Clerk}{Safeway}{July 2016 -- February 2018}{Sherwood Park, Alberta}
+    \begin{itemize}
+      \item Cleaned and stocked produce product
+      \item Worked with customers to find what they are looking for.
+    \end{itemize}
+    
+  \section{Interests}
+    \begin{itemize}
+      \item Embedded system and computer programming
+      \item Designing embedded circuits.
+    \end{itemize}
+
+    \section{Projects}
+
+    \subsection{Engineering Capstone - Mesh Messaging System}
+      \begin{itemize}
+        \item Mesh communication system with the goal of offering communication over a kilometer or more. 
+        \item Phones connect to mesh points and use an app to send messages over this network.
+        \item This goal is to allow communication over a distance when cellular service is not available or unreliable.
+      \end{itemize}
+
+    \subsection{Personal File Storage Server}
+      \begin{itemize}
+        \item Arch Linux is the operating system of choice for both the personal computer and server functions.
+        \item Built from parts found at the computer store.
+        \item Plex software is used for the media streaming functionality
+        \item "Syncthing" software for file synchronization.
+        \item File systems like ZFS, BTRFS, and Windows Storage Spaces are used for data redundancy in case of a hardware failure.
+      \end{itemize}
+
+    \subsection{Personal Website}
+      \begin{itemize}
+        \item Personal website showcasing what I have to offer. Can be seen at lyndeno.ca.
+      \end{itemize}
+    
+    \section{Technical Skills}
+      \begin{itemize}
+        \item MATLAB, Bentley Microstation, Xilinx Vivado, MS Office, Microchip AVR
+        \item C, Powershell, VBA, FreeRTOS, AVR C, HTML, Rust(Beginner Level)
+        \item Deep understanding of Linux and Windows
+      \end{itemize}
+    
+    \section{Personal Skills}
+      \begin{itemize}
+        \item Ability to work under pressure.
+        \item Comfortable working independently or with a team.
+        \item Ability to take initiative to solve complex problems.
+        \item Extremely familiar with computers and can easily adapt to use new software and hardware devices.
+      \end{itemize}
+\end{multicols*}
 \end{document}
