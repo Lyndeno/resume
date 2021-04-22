@@ -1,3 +1,3 @@
-Readme using the [altacv](https://github.com/liantze/AltaCV) template.
+# Lyndon Sanche's Resume
 
-Also trying my hand at some github actions to make this more automated.
+This is the LaTeX source for my resume, built on each tag with Github actions.
