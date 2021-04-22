@@ -66,9 +66,8 @@
 
 \newcommand{\sepdot}{\large\textperiodcentered}
 
-\newcommand{\contact}[7]{
-    \noindent \iconaddress \hspace{0em} #1 {\sepdot} #2 {\sepdot} #3 \hspace{1em} \iconphone \hspace{0em} #4 \\
-    \noindent \iconemail \hspace{0em} #5 \hspace{1em} \iconwebsite \hspace{0em} #6 \hspace{1em} \iconlinkedin \hspace{0em} #7
+\newcommand{\contact}[4]{
+    \noindent \iconphone \hspace{0em} #1 \hspace{1em} \iconemail \hspace{0em} #2 \hspace{1em} \iconwebsite \hspace{0em} #3 \hspace{1em} \iconlinkedin \hspace{0em} #4
 }
 
 \newcommand{\divider}{
