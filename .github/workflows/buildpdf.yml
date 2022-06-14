@@ -26,14 +26,12 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: Github Action for LaTeX
-        uses: xu-cheng/latex-action@v2
-        with:
-          root_file: |
-            lsanche.tex
+      - name: Build resume with Nix
+        uses: cachix/install-nix-action@v17
+      - run: nix-build
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          files: lsanche.pdf
+          files: ./result/lsanche.pdf
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
