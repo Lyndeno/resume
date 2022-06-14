@@ -7,7 +7,7 @@
   };
 
   outputs = { self, nixpkgs, flake-utils }:
-  with flake-utils.lib; eachSystem allSystems (system:
+  with flake-utils.lib; eachSystem defaultSystems (system:
   let
     pkgs = nixpkgs.legacyPackages.${system};
     tex = pkgs.texlive.combine {
@@ -35,7 +35,7 @@
           cp lsanche.pdf $out/
         '';
       };
+      default = packages.resume;
     };
-    defaultPackage = packages.resume;
   });
 }
