@@ -28,7 +28,7 @@ jobs:
 
       - name: Build resume with Nix
         uses: cachix/install-nix-action@v17
-      - run: nix-build
+      - run: nix build
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
