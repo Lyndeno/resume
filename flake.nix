@@ -21,21 +21,19 @@
       resume = pkgs.stdenvNoCC.mkDerivation rec {
         name = "lsanche-resume";
         src = self;
-        buildInputs = [ pkgs.coreutils tex ];
+        buildInputs = [ pkgs.gnumake pkgs.coreutils tex ];
         phases = [ "unpackPhase" "buildPhase" "installPhase" ];
-        buildPhase = ''
-          export PATH="${pkgs.lib.makeBinPath buildInputs}";
-          mkdir -p .cache/texmf-var
-          env TEXMFHOME=.cache TEXMFVAR=.cache/texmf-var \
-            latexmk -interaction=nonstopmode -pdf -lualatex \
-            lsanche.tex
-        '';
         installPhase = ''
           mkdir -p $out
           cp lsanche.pdf $out/
         '';
       };
       default = packages.resume;
+    };
+    devShells = {
+      default = pkgs.mkShell {
+        buildInputs = [ packages.default.buildInputs ];
+      };
     };
   });
 }
