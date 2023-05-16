@@ -30,16 +30,16 @@
     {}{0em}
     {}
 
-\newcommand{\workexp}[4]{
+\newcommand{\workexp}[5]{
     {\color{subheading}\noindent\large #1}
 
+    {\color{subheading}\noindent #2}
+
+    \noindent\textbf{#3}
+
     \smallskip
 
-    \noindent\textbf{#2}
-
-    \smallskip
-
-    \noindent\small\makebox[0.55\linewidth][l]{\icondate \hspace{0em} #3} \makebox[0.44\linewidth][l]{\iconlocation \hspace{0em} #4}
+    \noindent\small\makebox[0.55\linewidth][l]{\icondate \hspace{0em} #4} \makebox[0.44\linewidth][l]{\iconlocation \hspace{0em} #5}
 }
 
 \newcommand{\eduexp}[4]{
