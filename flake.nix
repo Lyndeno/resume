@@ -10,12 +10,11 @@
   with flake-utils.lib; eachSystem defaultSystems (system:
   let
     pkgs = nixpkgs.legacyPackages.${system};
-    tex = pkgs.texlive.combine {
-      inherit (pkgs.texlive)
+    tex = pkgs.texlive.withPackages (ps: with ps; [
         scheme-basic latex-bin latexmk titlesec fontawesome
         fontspec xcolor dashrule ifmtarg enumitem hyphenat lato fontaxes
-        xkeyval;
-    };
+        xkeyval
+      ]);
   in rec {
     packages = {
       resume = pkgs.stdenvNoCC.mkDerivation rec {
