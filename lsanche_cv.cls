@@ -16,6 +16,7 @@
 \newcommand{\iconemail}{\faAt}
 \newcommand{\iconlinkedin}{\faLinkedin}
 \newcommand{\iconwebsite}{\faChain}
+\newcommand{\icongithub}{\faGithub}
 
 \titleformat{\section}
     {\bfseries\Large\raggedright}
@@ -66,8 +67,8 @@
 
 \newcommand{\sepdot}{\large\textperiodcentered}
 
-\newcommand{\contact}[4]{
-    \noindent \iconphone \hspace{0em} #1 \hspace{1em} \iconemail \hspace{0em} #2 \hspace{1em} \iconwebsite \hspace{0em} #3 \hspace{1em} \iconlinkedin \hspace{0em} #4
+\newcommand{\contact}[5]{
+    \noindent \iconphone \hspace{0em} #1 \hspace{0.2em} \iconemail \hspace{0em} #2 \hspace{0.2em} \iconwebsite \hspace{0em} #3 \hspace{0.2em} \iconlinkedin \hspace{0em} #4 \hspace{0.2em} \icongithub \hspace{0em} #5
 }
 
 \newcommand{\divider}{
