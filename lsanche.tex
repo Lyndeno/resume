@@ -22,14 +22,14 @@
 
 \smallskip
 
-\contact{(780)-940-3401}{lsanche@lyndeno.ca}{lyndeno.ca}{linkedin.com/in/LyndonSanche}{github.com/Lyndeno}
+\contact{780-940-3401}{lsanche@lyndeno.ca}{lyndeno.ca}{linkedin.com/in/LyndonSanche}{github.com/Lyndeno}
 
-\begin{multicols*}{2}
+\begin{multicols}{2}
   \section{Education}
     \eduexp{University of Alberta}{September 2017 -- April 2021}{BSc. Electrical Engineering}{Edmonton, Alberta}
 
   \section{Experience}
-	\workexp{Engineer in Training -- CIP Compliance}{Protection and Control, then Operations Engineering}{ATCO Electric}{July 2022 -- Present}{Edmonton, Alberta}
+	\workexp{Engineer in Training -- CIP Compliance}{Protection and Control \& Operations Engineering}{ATCO Electric}{July 2022 -- Present}{Edmonton, Alberta}
     \begin{itemize}
 			\item Ensure CIP (Critical Infrastructure Protection) compliance by:
             \begin{itemize}
@@ -59,47 +59,55 @@
 
 	\workexp{Engineer in Training}{Research \& Development}{Eleven Engineering}{June -- November 2021}{Edmonton, Alberta}
     \begin{itemize}
-	  \item Main project included work on mobile/desktop app that interfaces with wireless audio hardware. App developed with Qt for macOS, iOS, Windows, and Android. Work included code development and testing and experimentation with a rewrite in Rust.
+		\item Mobile and desktop app to interface with embedded wireless audio hardware. Utilizing Qt with experimental Rust rewrite.
 		\item Firmware development in C++ with a touch of Assembly for the Xinc2 platform.
+		\item Developed rotary encoder driver for volume control.
+		\item Debugged wireless signal to fix timing error in Assembly code.
     \end{itemize}
 
     \columnbreak
     
   \section{Interests}
     \begin{itemize}
-      \item Embedded system and computer programming.
-      \item Designing embedded circuits.
-			\item Electrical system protection.
+      \item Embedded systems.
+			\item Kernel Development.
+			\item Electrical system automation.
+			\item Databases
     \end{itemize}
 
     \section{Projects}
 
+		\project{Dell-PC Kernel Module}
+			\begin{itemize}
+				\item Created a new module upstreamed to the Linux kernel in version 6.11.
+				\item Links kernel platform\_profile interface to Dell computer fan modes controlled in the smbios tables.
+				\item Allows easy switching of fan curve modes by the end-user in common desktop environments, usually by a button or slider.
+			\end{itemize}
+
+		\divider
+
     \project{Mesh Messaging System}
       \begin{itemize}
         \item Electrical engineering capstone project.
-        \item Mesh communication system with the goal of offering communication over a kilometer or more. 
-        \item Phones connect to mesh points and use an app to send messages over this network.
-        \item The goal is to allow communication over a distance when cellular service is not available or unreliable.
+        \item Mesh communication system to communicate over a kilometer or more. 
+        \item Phones connect to mesh points via WiFi and use an app to send messages over this network.
+        \item Allow communication over a distance when cellular service is not available or unreliable.
       \end{itemize}
 
     \divider
 
     \project{Personal File Storage Server}
       \begin{itemize}
-        \item NixOS is the operating system of choice for both the personal computer and server functions. Configured in the Nix language.
-        \item Built from parts found at the computer store.
-        \item Plex software is used for the media streaming functionality
-        \item Syncthing software for file synchronization.
+        \item NixOS for both the personal computer and server functions. Configured in the Nix language.
 				\item File systems like ZFS (previously BTRFS and Windows Storage Spaces) are used for data redundancy in case of a hardware failure.
 				\item Automatic off-site backups for data protection.
-				\item Paperless-ngx for personal document storage and tagging.
       \end{itemize}
 
     \section{Technical Skills}
       \begin{itemize}
         \item MATLAB, Bentley Microstation, Xilinx Vivado, MS Office, Microchip AVR
         \item C, Rust, Nix/NixOS, Powershell, VBA, FreeRTOS, AVR C, HTML
-        \item Deep understanding of Linux and Windows
+        \item Linux Kernel development, from writing code to sending to mailing list.
         \item NERC CIP (Critical Infrastructure Protection)
       \end{itemize}
     
@@ -108,6 +116,7 @@
         \item Comfortable working independently or with a team.
         \item Ability to take initiative to solve complex problems.
         \item Extremely familiar with computers and can easily adapt to use new software and hardware devices.
+				\item Comfortable creating abstract solutions to problems.
       \end{itemize}
-\end{multicols*}
+\end{multicols}
 \end{document}

@@ -6,6 +6,9 @@
 \RequirePackage{fontawesome}
 \RequirePackage[dvipsnames]{xcolor}
 \RequirePackage{dashrule}
+\RequirePackage[hidelinks]{hyperref}
+
+\hypersetup{colorlinks=false}
 
 \colorlet{subheading}{black!80!white}
 
@@ -68,7 +71,7 @@
 \newcommand{\sepdot}{\large\textperiodcentered}
 
 \newcommand{\contact}[5]{
-    \noindent \iconphone \hspace{0em} #1 \hspace{0.2em} \iconemail \hspace{0em} #2 \hspace{0.2em} \iconwebsite \hspace{0em} #3 \hspace{0.2em} \iconlinkedin \hspace{0em} #4 \hspace{0.2em} \icongithub \hspace{0em} #5
+	\noindent \iconphone \hspace{0em} \href{tel:#1}{#1} \hspace{0.2em} \iconemail \hspace{0em} \href{mailto:#2}{#2} \hspace{0.2em} \iconwebsite \hspace{0em} \href{https://#3}{#3} \hspace{0.2em} \iconlinkedin \hspace{0em} \href{https://#4}{#4} \hspace{0.2em} \icongithub \hspace{0em} \href{https://#5}{#5}
 }
 
 \newcommand{\divider}{
