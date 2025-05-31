@@ -1,5 +1,10 @@
 \documentclass{lsanche_cv}
 
+% ATS compat
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+
 \usepackage[letterpaper, total={7in, 9.5in}]{geometry}
 \usepackage{multicol}
 \usepackage{enumitem}
@@ -24,99 +29,110 @@
 
 \contact{780-940-3401}{lsanche@lyndeno.ca}{lyndeno.ca}{linkedin.com/in/LyndonSanche}{github.com/Lyndeno}
 
-\begin{multicols}{2}
-  \section{Education}
-    \eduexp{University of Alberta}{September 2017 -- April 2021}{BSc. Electrical Engineering}{Edmonton, Alberta}
+\section{Education}
+\eduexp{University of Alberta}{September 2017 -- April 2021}{BSc. Electrical Engineering}{Edmonton, Alberta}
 
-  \section{Experience}
-	\workexp{Engineer in Training -- CIP Compliance}{Protection and Control \& Operations Engineering}{ATCO Electric}{July 2022 -- Present}{Edmonton, Alberta}
+\section{Employment}
+\workexp{Data Engineer}{DataAnnotation}{DataAnnotation}{January 2025 -- Present}{Remote}
+\begin{itemize}
+		\item Helped train large language models by rating responses by correctness and instruction following.
+		\item Enhanced AI coding ability by writing complex code in Rust, C, Javascript, SQL, and Python to guide AI responses.
+		\item Enhanced AI understanding of intent by creating fine-grained criteria to rate AI responses againt.
+		\item Encouraged safety in AI by marking responses that are incorrect or malicious.
+\end{itemize}
+
+\divider
+
+\workexp{Engineer in Training -- CIP Compliance}{Protection and Control \& Operations Engineering}{ATCO Electric}{July 2022 -- Present}{Edmonton, Alberta}
+\begin{itemize}
+		\item Ensure CIP (Critical Infrastructure Protection) compliance by:
     \begin{itemize}
-			\item Ensure CIP (Critical Infrastructure Protection) compliance by:
-            \begin{itemize}
-              \item Completing management-of-change procedures.
-              \item Maintaining baseline records.
-              \item Updating Electronic Security Perimeter drawings.
-              \item Completing monthly patch reports.
-              \item Creating and completing mitigation plan tasks.
-              \item Act as CIP resource for affected projects.
-            \end{itemize}
-			\item Prepare monthly As-Build and Issue reports.
-			\item Manage PowerApp for recognising positive safety practice.
-			\item Create automated relay setting deficiency report using SQL, PowerBI, and Power Automate.
+      \item Completing management-of-change procedures.
+      \item Maintaining baseline records.
+      \item Updating Electronic Security Perimeter drawings.
+      \item Completing monthly patch reports.
+      \item Creating and completing mitigation plan tasks.
+      \item Act as CIP resource for affected projects.
     \end{itemize}
+		\item Prepare monthly As-Build and Issue reports.
+		\item Manage PowerApp for recognising positive safety practice.
+		\item Create automated relay setting deficiency report using SQL, PowerBI, and Power Automate.
+\end{itemize}
+
+\divider
+
+\workexp{Engineer in Training}{Protection and Control}{ATCO Electric}{November 2021 -- July 2022}{Edmonton, Alberta}
+\begin{itemize}
+		\item Assist with regulation compliance by updating entries in tracking spreadsheets and Maximo database.
+		\item Resolve outstanding as-builts in relay settings database.
+		\item Prepared and presented PowerPoint to team members on safety topic.
+		\item Collect and analyze relay records when outages occur.
+\end{itemize}
+
+\divider
+
+\workexp{Engineer in Training}{Research \& Development}{Eleven Engineering}{June -- November 2021}{Edmonton, Alberta}
+\begin{itemize}
+	\item Mobile and desktop app to interface with embedded wireless audio hardware. Utilizing Qt with experimental Rust rewrite.
+	\item Firmware development in C++ with a touch of Assembly for the Xinc2 platform.
+	\item Developed rotary encoder driver for volume control.
+	\item Debugged wireless signal to fix timing error in Assembly code.
+\end{itemize}
+
+\section{Other Experience}
+\workexp{Kernel Maintainer}{Dell-PC Module}{Linux Kernel}{May 2024 -- Present}{Remote}
+
+\noindent{I improved Dell PC support in the Linux kernel by creating a link between the Dell BIOS fan modes and the kernel platform\_profile interface. This work enhanced user experience by linking with already existing user tools to make it easy to change the fan mode on the computer. Written in C.}
+
+\divider
+
+\workexp{Package Maintainer}{NixOS}{nixpkgs}{July 2024 -- Present}{Remote}
+
+\noindent{Maintain and review updates to packages in the NixOS Linux distribution. Packages maintained include lubelogger, a vehicle maintenance tracker; and power-profiles-daemon, a Linux power management service.}
+
+\divider
+
+\workexp{Open Source Developer}{Various Projects}{}{Ongoing}{Remote}
+
+\noindent{I actively use my free time to develop open source software to solve problems and hone my skills. I am currently working on ironfetch, a system information tool; ppd-rs, a Rust library for the power-profiles-daemon; memdev, a Rust library for getting system memory information; and more recently, lowpowerd, a small utility to automatically set low power modes on Linux. My latest interest has been in build automation, utilizing Github actions and Nix Hydra for continuous integration.}
+
+\section{Projects}
+
+	\project{Dell-PC Kernel Module}
+		\begin{itemize}
+			\item I created a new module upstreamed to the Linux kernel in version 6.11.
+			\item I enhanced Linux usability by linking the kernel platform\_profile interface to Dell computer fan modes controlled in the smbios tables.
+      \item I enhanced user experience by allowing these fan modes to be configured through an easy to use interface.
+		\end{itemize}
 
 	\divider
 
-	\workexp{Engineer in Training}{Protection and Control}{ATCO Electric}{November 2021 -- July 2022}{Edmonton, Alberta}
-    \begin{itemize}
-			\item Assist with regulation compliance by updating entries in tracking spreadsheets and Maximo database.
-			\item Resolve outstanding as-builts in relay settings database.
-			\item Prepared and presented PowerPoint to team members on safety topic.
-			\item Collect and analyze relay records when outages occur.
-    \end{itemize}
+\project{Mesh Messaging System}
+\begin{itemize}
+\item Electrical engineering capstone project utilizing Microchip Atmel and Espressif chipsets.
+\item Mesh communication system to communicate over a kilometer or more. 
+\item I designed an app that allowed phones to connect to the mesh points over wifi. I implemented the system so that messages sent to users travelled through the mesh points.
+\item This project was a proof of concept for a system that can allow offgrid communication over a large distance.
+\item I learned to program C with the FreeRTOS project, gaining knowledge of RTOS programming in embedded environments.
+\end{itemize}
 
-	\divider
+\divider
 
-	\workexp{Engineer in Training}{Research \& Development}{Eleven Engineering}{June -- November 2021}{Edmonton, Alberta}
-    \begin{itemize}
-		\item Mobile and desktop app to interface with embedded wireless audio hardware. Utilizing Qt with experimental Rust rewrite.
-		\item Firmware development in C++ with a touch of Assembly for the Xinc2 platform.
-		\item Developed rotary encoder driver for volume control.
-		\item Debugged wireless signal to fix timing error in Assembly code.
-    \end{itemize}
+\project{Personal NixOS Machine}
+\begin{itemize}
+\item NixOS for both the personal computer and server functions. Configured in the Nix language.
+\item I implemented the usage of ZFS for data redundancy, with offsite backups for safety.
+\item I enhanced security and usability for my other machines by hosting a Hydra server to automatically build my machine configurations before pushing them to a Minio S3 cache using attic. This allows my other, slower, machines to be upgraded effortlessly.
+\item I improved privacy by running ollama locally, sharing access with my phone and laptop for easy large language model usage without privacy concerns.
+\item Nix Hydra server is running to continuously build and test all of my projects.
+\end{itemize}
 
-    \columnbreak
-    
-  \section{Interests}
-    \begin{itemize}
-      \item Embedded systems.
-			\item Kernel Development.
-			\item Electrical system automation.
-			\item Databases
-    \end{itemize}
+\section{Technical Skills}
+\begin{itemize}
+\item MATLAB, Bentley Microstation, Xilinx Vivado, MS Office, Microchip AVR
+\item C, Rust, Nix/NixOS, Powershell, VBA, FreeRTOS, AVR C, HTML
+\item Linux Kernel development, from writing code to sending to mailing list.
+\item NERC CIP (Critical Infrastructure Protection)
+\end{itemize}
 
-    \section{Projects}
-
-		\project{Dell-PC Kernel Module}
-			\begin{itemize}
-				\item Created a new module upstreamed to the Linux kernel in version 6.11.
-				\item Links kernel platform\_profile interface to Dell computer fan modes controlled in the smbios tables.
-				\item Allows easy switching of fan curve modes by the end-user in common desktop environments, usually by a button or slider.
-			\end{itemize}
-
-		\divider
-
-    \project{Mesh Messaging System}
-      \begin{itemize}
-        \item Electrical engineering capstone project.
-        \item Mesh communication system to communicate over a kilometer or more. 
-        \item Phones connect to mesh points via WiFi and use an app to send messages over this network.
-        \item Allow communication over a distance when cellular service is not available or unreliable.
-      \end{itemize}
-
-    \divider
-
-    \project{Personal File Storage Server}
-      \begin{itemize}
-        \item NixOS for both the personal computer and server functions. Configured in the Nix language.
-				\item File systems like ZFS (previously BTRFS and Windows Storage Spaces) are used for data redundancy in case of a hardware failure.
-				\item Automatic off-site backups for data protection.
-      \end{itemize}
-
-    \section{Technical Skills}
-      \begin{itemize}
-        \item MATLAB, Bentley Microstation, Xilinx Vivado, MS Office, Microchip AVR
-        \item C, Rust, Nix/NixOS, Powershell, VBA, FreeRTOS, AVR C, HTML
-        \item Linux Kernel development, from writing code to sending to mailing list.
-        \item NERC CIP (Critical Infrastructure Protection)
-      \end{itemize}
-    
-    \section{Personal Skills}
-      \begin{itemize}
-        \item Comfortable working independently or with a team.
-        \item Ability to take initiative to solve complex problems.
-        \item Extremely familiar with computers and can easily adapt to use new software and hardware devices.
-				\item Comfortable creating abstract solutions to problems.
-      \end{itemize}
-\end{multicols}
 \end{document}

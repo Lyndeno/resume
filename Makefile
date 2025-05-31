@@ -2,7 +2,7 @@
 generate:
 	mkdir -p .cache/texmf-var
 	env TEXMFHOME=.cache TEXMFVAR=.cache/texmf-var \
-		latexmk -interaction=nonstopmode -pdf -lualatex \
+		latexmk -interaction=nonstopmode -pdf -pdflatex \
 		lsanche.tex
 
 clean:
