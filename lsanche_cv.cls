@@ -53,7 +53,7 @@
     \noindent\textbf{#1}
 
     \smallskip
-    \noindent\small\makebox[0.55\linewidth][l]{\icondate \hspace{0em} #2} \makebox[0.44\linewidth][l]{\iconlocation \hspace{0em} #4}
+		\noindent\small\icondate \hspace{0em} #2 \hspace{0em} \iconlocation \hspace{0em} #4
 }
 
 \newcommand{\name}[1]{
